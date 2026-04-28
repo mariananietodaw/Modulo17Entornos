@@ -5,16 +5,16 @@ public class codigoM {
     public int temp; // Campo temporal innecesario
 
 
-    public void procesar(String tipo, int manzanas, int caramelos, Cliente cliente) {
+    public void procesar(String tipo, int m, int ca, Cli cl) {
         int total = 0;
 
-        // Método largo + uso de if (como switch)
+        // Metodo largo + uso de if (como switch)
         if (tipo.equals("normal")) {
-            total = manzanas + caramelos;
+            total = m + ca;
         } else if (tipo.equals("doble")) {
-            total = (manzanas + caramelos) * 2;
+            total = (m + ca) * 2;
         } else if (tipo.equals("mitad")) {
-            total = (manzanas + caramelos) / 2;
+            total = (m + ca) / 2;
         }
 
         // Código duplicado
@@ -28,21 +28,21 @@ public class codigoM {
         }
 
         // Feature Envy (envidia de características)
-        if (cliente.edad > 50) {
+        if (cl.x > 50) {
             System.out.println("cliente mayor");
         }
 
         // Inappropriate Intimacy (acceso directo a datos)
-        cliente.productos += total;
+        cli.productos += total;
 
         // Demasiadas responsabilidades
-        System.out.println("Email enviado a " + cliente.email);
+        System.out.println("Email enviado a " + cli.email);
         System.out.println("Guardado en base de datos");
     }
 }
 
-class Cliente {
-    public int edad;
+class Cli {
+    public int x;
     public String email;
     public int productos;
 }
